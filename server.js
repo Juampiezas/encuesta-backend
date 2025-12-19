@@ -24,7 +24,7 @@ app.post("/send-code", async (req, res) => {
 
   try {
     await resend.emails.send({
-      from: "Encuesta Gym <onboarding@resend.dev>",
+      from: "Encuesta Gym <no-reply@tudominio.com>"
       to: email,
       subject: "Tu código de verificación",
       html: `
@@ -44,3 +44,4 @@ app.post("/send-code", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
 });
+
